@@ -83,7 +83,7 @@
          Cat
          </label>
       </div>
-      <div class = "table-toggles" style = "display: none">
+      <div class = "table-toggles" style = "display:none">
          <button id="daycare-toggle" class="daycare-button" style = "margin-right: 20px">Day Care</button>
          <button id="boarding-toggle" class="boarding-button">Boarding</button>
       </div>
@@ -254,5 +254,51 @@
       </div>
       <p>*<i>Price not including tax</i></p>
       <p><i>Call us to learn about exclusive discount options!</i></p>
-   </body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dogToggle = document.getElementById("dog-toggle");
+        const catToggle = document.getElementById("cat-toggle");
+        const daycareToggle = document.getElementById("daycare-toggle");
+        const boardingToggle = document.getElementById("boarding-toggle");
+
+        const tableToggles = document.querySelector(".table-toggles");
+        const daycareTable = document.querySelector(".daycare-tables");
+        const boardingTable = document.querySelector(".boarding-tables");
+        const catTable = document.querySelector(".cat-table");
+
+        // Dog Selection
+        dogToggle.addEventListener("change", function () {
+          if (dogToggle.checked) {
+            tableToggles.style.display = "block";
+            catTable.style.display = "none";
+            daycareTable.style.display = "none";
+            boardingTable.style.display = "none";
+          }
+        });
+
+        // Cat Selection
+        catToggle.addEventListener("change", function () {
+          if (catToggle.checked) {
+            catTable.style.display = "block";
+            tableToggles.style.display = "none";
+            daycareTable.style.display = "none";
+            boardingTable.style.display = "none";
+          }
+        });
+
+        // Daycare Button
+        daycareToggle.addEventListener("click", function () {
+          daycareTable.style.display = "block";
+          boardingTable.style.display = "none";
+        });
+
+        // Boarding Button
+        boardingToggle.addEventListener("click", function () {
+          boardingTable.style.display = "block";
+          daycareTable.style.display = "none";
+        });
+      });
+    </script>
+  </body>
 </html>
