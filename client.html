@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         .toggle-container {
+         display: flex;
+         justify-content: flex-start; /* Align items to the left */
+         gap: 20px;
+         margin-top: 20px;
+         font-family: Futura-PT;
+         margin-left: 20px; /* Add some left margin for spacing */
+         }
+         #daycare-toggle, #boarding-toggle{
+         padding: 12px 20px; 
+         text-align: left; 
+         border: 2px solid #da0707; 
+         color: #da0707;
+         /*margin-left: 100px;*/
+         font-weight: bold;
+         background-color: white;
+         font-family: Futura-PT;
+         transition-duration: 0.4s;
+         }
+         #daycare-toggle:hover, #boarding-toggle:hover {
+         background-color: #da0707;
+         color: white;
+         font-family: Futura-PT;
+         }
+         .table-container {
+         display: flex;
+         justify-content: flex-start; /* Align tables to the left */
+         align-items: flex-start;
+         gap: 20px; /* Adjust the gap between the tables */
+         /*margin-left: 100px;*/
+         font-family: Futura-PT;
+         }
+         h1 {
+         text-align: left; 
+         font-weight: bold;
+         font-family: Futura-PT;
+         color: black;
+         }
+         #pricingTable th, #pricingTable td {
+         padding: 10px;
+         text-align: center; 
+         border: 2px solid #ccc; 
+         font-family: Futura-PT;
+         color: black;
+         }
+         #pricingTable th {
+         background-color: #f4f4f4; /* Light background for headers */
+         font-weight: bold; /* Bold font for headers */
+         font-family: Futura-PT;
+         }
+         .toggles{
+         /*margin-left: 100px;*/
+         font-size: 17px;
+         font-weight: bold;
+         color: black;
+         font-family: Futura-PT;
+         }
+         #header{
+         color: black;
+         }
+      </style>
+   </head>
+   <body>
+      <p style = "color: black; text-align: center; width: 60%; margin: auto">
+         At Walter's Pet Styles, we’re always looking for ways to better serve you and your furry friends. With various day care packages, lower prices, and convenient holiday care options, we’ve got you covered! 
+         </br></br>We’re committed to making pet care convenient, flexible, and reliable – even during the holidays! These updates are designed to give you peace of mind while ensuring your furry friends feel pampered, safe, and loved
+      </p>
+      </br>
+      <div class = "toggles">
+         <label for="dog-toggle" class="toggle-label">
+         <input type="radio" id="dog-toggle" name="toggle" class="toggle-input">
+         Dog
+         </label>
+         </br>
+         <label for="cat-toggle" class="toggle-label">
+         <input type="radio" id="cat-toggle" name="toggle" class="toggle-input">
+         Cat
+         </label>
+      </div>
+      <div class = "table-toggles" style = "display: none">
+         <button id="daycare-toggle" class="daycare-button" style = "margin-right: 20px">Day Care</button>
+         <button id="boarding-toggle" class="boarding-button">Boarding</button>
+      </div>
+      </br>
+      <div class = "daycare-tables" id = "pricingTable" style = "display: none">
+         <h2 id = "header"> Daycare Pricing - Dogs Only </h2>
+         <table>
+            <tr>
+               <th>Package</th>
+               <th>Daycare Price</th>
+               <th>Per Day Cost</th>
+               <th>Savings Compared to</br>Single Day</th>
+               <th>Package Valid for</th>
+            </tr>
+            <tr>
+               <td>Single Day</td>
+               <td>$80</td>
+               <td>$80/day</td>
+               <td>N/A</td>
+               <td>Same day</td>
+            </tr>
+            <tr>
+               <td>5-Day Pack</td>
+               <td>$350</td>
+               <td>$70/day</td>
+               <td>Save $50</td>
+               <td>90 days</td>
+            </tr>
+            <tr>
+               <td>10-Day Pack</td>
+               <td>$600</td>
+               <td>$60/day</td>
+               <td>Save $200</td>
+               <td>90 days</td>
+            </tr>
+            <tr>
+               <td>15-Day Pack</td>
+               <td>$850</td>
+               <td>$56.67/day</td>
+               <td>Save $350</td>
+               <td>90 days</td>
+            </tr>
+            <tr>
+               <td>20-Day Pack</td>
+               <td>$995</td>
+               <td>$49.75/day</td>
+               <td>Save $605</td>
+               <td>90 days</td>
+            </tr>
+         </table>
+         </br>
+         <h2 id = "header">Daycare + Boarding Pricing - Dogs Only**</h2>
+         <table>
+            <thead>
+               <tr>
+                  <th>Package Holder</th>
+                  <th>Daycare Price</th>
+                  <th>Boarding Price</th>
+                  <th>Total Per Day Cost</br>(Daycare + Boarding)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Single Day</td>
+                  <td>$80/day</td>
+                  <td>$40/night</td>
+                  <td>$120</td>
+               </tr>
+               <tr>
+                  <td>5-Day Pack</td>
+                  <td>$70/day</td>
+                  <td>$35/night</td>
+                  <td>$105/day</td>
+               </tr>
+               <tr>
+                  <td>10-Day Pack</td>
+                  <td>$60/day</td>
+                  <td>$35/night</td>
+                  <td>$95/day</td>
+               </tr>
+               <tr>
+                  <td>15-Day Pack</td>
+                  <td>$56.67/day</td>
+                  <td>$35/night</td>
+                  <td>$91.67/day</td>
+               </tr>
+               <tr>
+                  <td>20-Day Pack</td>
+                  <td>$49.75/day</td>
+                  <td>$35/night</td>
+                  <td>$84.75/day</td>
+               </tr>
+            </tbody>
+         </table>
+         <p>**<i>For major holidays, a $15 per day holiday surcharge will be applied to ensure premium care for your pets during these busy times.</i></p>
+      </div>
+      <div class = "boarding-tables" id = "pricingTable" style = "display: none">
+         <h2 id = "header">Boarding Pricing</h2>
+         <table>
+            <tr>
+               <th>Service</th>
+               <th>Price</th>
+            </tr>
+            <tr>
+               <td>Boarding</td>
+               <td>$75 per night</td>
+            </tr>
+         </table>
+         <h2 id = "header">Boarding + Daycare Pricing - Dogs Only**</h2>
+         <table>
+            <thead>
+               <tr>
+                  <th>Package Holder</th>
+                  <th>Daycare Price</th>
+                  <th>Boarding Price</th>
+                  <th>Total Per Day Cost</br>(Daycare + Boarding)</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Single Day</td>
+                  <td>$80/day</td>
+                  <td>$40/night</td>
+                  <td>$120</td>
+               </tr>
+               <tr>
+                  <td>5-Day Pack</td>
+                  <td>$70/day</td>
+                  <td>$35/night</td>
+                  <td>$105/day</td>
+               </tr>
+               <tr>
+                  <td>10-Day Pack</td>
+                  <td>$60/day</td>
+                  <td>$35/night</td>
+                  <td>$95/day</td>
+               </tr>
+               <tr>
+                  <td>15-Day Pack</td>
+                  <td>$56.67/day</td>
+                  <td>$35/night</td>
+                  <td>$91.67/day</td>
+               </tr>
+               <tr>
+                  <td>20-Day Pack</td>
+                  <td>$49.75/day</td>
+                  <td>$35/night</td>
+                  <td>$84.75/day</td>
+               </tr>
+            </tbody>
+         </table>
+         <p>**<i>For major holidays, a $15 per day holiday surcharge will be applied to ensure premium care for your pets during these busy times.</i></p>
+      </div>
+      <div class = "cat-table" style = "display: none">
+         <h2 id = "header">Flat-Rate Pricing for Cats</h2>
+         <p>We’ve made pricing for cats simple and straightforward:</p>
+         <table id="pricingTable">
+            <tr>
+               <th>Service</th>
+               <th>Price</th>
+            </tr>
+            <tr>
+               <td>Daycare or Boarding</td>
+               <td>$55 per day/night</td>
+            </tr>
+         </table>
+         <p>No holiday surcharges apply for cats.</p>
+      </div>
+      <p>*<i>Price not including tax</i></p>
+      <p><i>Call us to learn about exclusive discount options!</i></p>
+   </body>
+</html>
